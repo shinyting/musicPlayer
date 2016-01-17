@@ -1,8 +1,58 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+	height: 100%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+	margin: 10px;
+	height: 150px;
+	border: 1px solid #fff;
+}
+header h1 {
+	font-size: 40px;
+	height: 60px;
+	line-height: 60px;
+}
+.left {
+	position: absolute;
+	left: 10px;
+	float: left;
+	width: 200px;
+	height: 100%;
+	border: 1px solid #fff;
+	/*margin: 10px;*/
+}
+.left ul {
+	/*overflow: auto;*/
+}
+.left ul li {
+	width: 200px;
+	height: 40px;
+	border-bottom: 1px solid #999;
+	line-height: 40px;
+	cursor: pointer;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.left ul li.selected {
+	color: green;
+}
+.right {
+	position: absolute;
+	right: 10px;
+	left: 220px;
+	/*margin: 10px;*/
+	height: 100%;
+	float: right;
+	border: 1px solid #fff;
 }
