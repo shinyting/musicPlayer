@@ -7,16 +7,19 @@
   <body>
   	<header>
   		<h1><%= title %></h1>
+  		<p>
+  			Volume <input id="volume" type="range" min="0" max="60">
+  		</p>
   	</header>
     <div class="left">
-    	<ul>
+    	<ul id="list">
     		<% music.forEach(function(name){ %>
-    			<li><%= name %></li>
+    			<li title="<%= name %>"><%= name %></li>
     		<% })%>
     	</ul>
     </div>
-    <div class="right">
+    <div class="right" id="box"></div>
 
-    </div>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
   </body>
 </html>
