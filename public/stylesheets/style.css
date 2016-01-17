@@ -22,14 +22,16 @@ header h1 {
 	height: 60px;
 	line-height: 60px;
 }
+.left,
+.right {
+	height: 73%;
+}
 .left {
 	position: absolute;
 	left: 10px;
 	float: left;
 	width: 200px;
-	height: 100%;
 	border: 1px solid #fff;
-	/*margin: 10px;*/
 }
 .left ul {
 	/*overflow: auto;*/
@@ -51,8 +53,28 @@ header h1 {
 	position: absolute;
 	right: 10px;
 	left: 220px;
-	/*margin: 10px;*/
-	height: 100%;
 	float: right;
 	border: 1px solid #fff;
+}
+
+.type {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #fff;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.type li {
+	list-style: none;
+	float: left;
+	width: 99px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+.type li.selected {
+	color: #333;
+	background: #eee;
 }
