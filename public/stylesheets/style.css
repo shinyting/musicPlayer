@@ -7,7 +7,7 @@
 body {
 	height: 100%;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background: #333;
+    background: #900;
     color: #fff;
     text-align: center;
 }
@@ -15,7 +15,7 @@ body {
 header {
 	margin: 10px;
 	height: 150px;
-	border: 1px solid #fff;
+	/*border: 1px solid #fff;*/
 }
 header h1 {
 	font-size: 40px;
@@ -24,27 +24,27 @@ header h1 {
 }
 .left,
 .right {
-	height: 73%;
+	height: 85%;
 }
 .left {
 	position: absolute;
 	left: 10px;
 	float: left;
-	width: 200px;
+	width: 15%;
 	border: 1px solid #fff;
 }
 .left ul {
 	/*overflow: auto;*/
 }
 .left ul li {
-	width: 200px;
+	width: 100%;
 	height: 40px;
 	border-bottom: 1px solid #999;
 	line-height: 40px;
 	cursor: pointer;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	white-space: nowrap;
+	white-space: nowrap;/*不换行*/
 }
 .left ul li.selected {
 	color: green;
@@ -52,14 +52,16 @@ header h1 {
 .right {
 	position: absolute;
 	right: 10px;
-	left: 220px;
+	left: -webkit-calc(15% + 20px);
+	left: calc(15% + 20px);
 	float: right;
-	border: 1px solid #fff;
+	/*border: 1px solid #fff;*/
 }
 
 .type {
 	width: 200px;
 	height: 30px;
+	line-height: 30px;
 	border: 1px solid #fff;
 	margin: 0 auto;
 	border-radius: 10px;
@@ -71,10 +73,58 @@ header h1 {
 	float: left;
 	width: 99px;
 	text-align: center;
-	line-height: 30px;
 	cursor: pointer;
 }
 .type li.selected {
 	color: #333;
 	background: #eee;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	height: 8px;
+	background: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 12px;
+	width: 12px;
+	background: #fff;
+	border-radius: 100%;
+}
+input[type="range"]::-moz-range-track {
+	height: 8px;
+	background: #999;
+	border-radius: 10px;
+	border: none;
+}
+input[type="range"]::-moz-range-thumb {
+	height: 12px;
+	width: 12px;
+	background: #fff;
+	border: none;
+	border-radius: 100%;
+}
+@media screen and (max-width : 800px), screen and (max-height:500px) {
+	body {
+		font-size: 12px;
+	}
+	header {
+		height: 80px;
+	}
+	header h1 {
+		font-size: 24px;
+		height: 34px;
+		line-height: 34px;
+	}
+	.type {
+		width: 100px;
+		height: 20px;
+		line-height: 20px;
+	}
+	.type li {
+		width: 49px;
+	}
 }
